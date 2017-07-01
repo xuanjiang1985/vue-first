@@ -8,23 +8,26 @@
     <button v-bind:disabled="someDynamicCondition">Button</button>
     <p v-if="seen">看到我了</p>
     <p><button v-on:click.once="reverseMessage">逆转消息</button></p> 
-    <hello-com></hello-com>
+    <hello-com father-eee="hello father" v-bind:father="fatherdata"></hello-com>
   </div>
 </template>
 
 <script>
-var hello = require('./Hello.vue');
+import hello from './Hello'
+
 export default {
   components: {
     'hello-com':hello
   },
-  ready () {
-    this.$http.get('http://localhost:8081/msg').then(response => {
-      this.mymsgs = response.data;
-      console.log(response.data.data);
-    }), response => {
-      console.log(response);
-    }
+  created () {
+    fetch('http://localhost:8081/msg')
+    .then(function(response) {
+        return response.json()
+      }).then(function(json) {
+        console.log('parsed json', json)
+      }).catch(function(ex) {
+        console.log('whatwg-fetch error ->', ex)
+      })
 
   },
   data () {
@@ -33,13 +36,16 @@ export default {
       message: '当前时间：' + new Date(),
       seen: true,
       someDynamicCondition: false,
-      mymsgs: null
+      mymsgs: 1222222,
+      fatherdata: 'fatherdata'
     }
   },
   
   methods:{
       reverseMessage: function () {
         this.message = this.message.split('').reverse().join('');
+        console.log(`hello test ${ this.mymsgs }`);
+        this.fatherdata = 'fatherdata changed';
       }
   }
   

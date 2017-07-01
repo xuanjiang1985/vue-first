@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
   <my-com></my-com>
+    <h1>{{ father }}</h1>
+    <h1>{{ fatherEee }}</h1>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
@@ -26,9 +28,10 @@
 <script>
 export default {
   name: 'hello',
+  props: ['father','fathereee'],
   data () {
     return {
-      msg: '哈喽，你好 。。。。。。'
+      msg: '我是hello vue'
     }
   }
 }
