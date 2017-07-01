@@ -1,5 +1,6 @@
 <template>
   <div class="hello">
+  <my-com></my-com>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
