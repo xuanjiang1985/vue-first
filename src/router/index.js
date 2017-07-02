@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import 'whatwg-fetch'
 import Hello from '@/components/Hello'
 import Test from '@/components/Test'
 import NotFound from '@/components/NotFound'

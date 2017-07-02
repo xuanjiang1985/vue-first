@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
   <my-com></my-com>
+    <p>{{ count }}</p>
     <h1>{{ father }}</h1>
     <h1>{{ fatherEee }}</h1>
     <h1>{{ msg }}</h1>
@@ -16,22 +17,27 @@
     <h2>Ecosystem</h2>
     <router-link :to="{'name':'Test'}">测试</router-link>
     <p><a href="/test">测试2</a></p>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+    <p><button v-on:click="startCount">count</button></p>
   </div>
 </template>
 
 <script>
 export default {
   name: 'hello',
-  props: ['father','fathereee'],
+  props: ['father','fatherEee'],
   data () {
     return {
-      msg: '我是hello vue'
+      msg: '我是hello vue',
+      count: this.$store.state.count
+    }
+  },
+  created() {
+    console.log(this.$store.state.count);
+  },
+  methods:{
+    startCount: function(){
+      this.$store.commit('increment')
+      this.count = this.$store.state.count
     }
   }
 }
