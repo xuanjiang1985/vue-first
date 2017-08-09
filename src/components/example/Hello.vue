@@ -25,7 +25,7 @@
 export default {
   name: 'hello',
   props: ['father','fatherEee'],
-  data () {
+  data() {
     return {
       msg: '我是hello vue',
       count: this.$store.state.count
@@ -34,7 +34,7 @@ export default {
   created() {
     console.log(this.$store.state.count);
   },
-  methods:{
+  methods: {
     startCount: function(){
       this.$store.commit('increment')
       this.count = this.$store.state.count

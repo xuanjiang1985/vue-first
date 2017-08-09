@@ -2,16 +2,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Vuex from 'vuex'
-import my from './components/my'
 
 Vue.use(Vuex)
 
 Vue.config.productionTip = false;
-Vue.component('my-com',my)
 
 const store = new Vuex.Store({
   state: {
   	host: 'http://localhost:8081',
+  	key: '123hiuiewrwersddf',
     count: 0
   },
   mutations: {
