@@ -20,6 +20,6 @@ export default {
 </script>
 <style scoped>
 #navbar {position: relative; background-color: #f5f5f5;}
-#navbar ul {margin-left: 15%;}
+#navbar ul {margin-left: 10%;}
 #login {position: absolute; top: 2px; right: 10px;}
 </style>
