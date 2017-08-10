@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>这是心情栏</h2>
+    <h2>这是美图栏</h2>
   </div>
 </template>
 

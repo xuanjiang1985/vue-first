@@ -1,15 +1,13 @@
 <template>
   <div>
-    <h1>my index {{ num }}</h1>
-    <router-link :to="{name: 'content', params: {id: 123}}">content page</router-link>
+    <h1>这是首页栏</h1>
   </div>
 </template>
 
 <script>
+
 export default {
-  data() {
-  	return {num: 1000}
-  }
+  
 }
 </script>
 

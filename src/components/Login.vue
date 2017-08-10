@@ -1,11 +1,14 @@
 <template>
   <div>
-    <h2>这是心情栏</h2>
+    <h1>这是登录页</h1>
   </div>
 </template>
 
 <script>
 
+export default {
+  
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
