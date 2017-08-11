@@ -4,7 +4,7 @@
       <li><router-link to="/">首页</router-link></li>
       <li><router-link to="/content">心情</router-link></li>
       <li><router-link to="/photo">美图</router-link></li>
-      <li><router-link to="/video">视频</router-link></li>
+      <li><router-link to="/profile">我的设置</router-link></li>
     </ul>
     <div id="login">
       <router-link to="/login" class="btn btn-info">登录</router-link>

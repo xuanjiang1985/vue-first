@@ -4,7 +4,7 @@ import Index from '@/components/Index'
 import Content from '@/components/Content'
 import Login from '@/components/Login'
 import Photo from '@/components/Photo'
-import Video from '@/components/Video'
+import Profile from '@/components/Profile'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
@@ -32,9 +32,9 @@ export default new Router({
       component: Photo
     },
 
-    { path: '/video',
-      name: 'video',
-      component: Video
+    { path: '/profile',
+      name: 'profile',
+      component: Profile
     },
     {
         path: '*',

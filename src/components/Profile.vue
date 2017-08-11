@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h2>这是视频栏</h2>
+  <div class="container">
+    <h2>这是个人设置</h2>
   </div>
 </template>
 
