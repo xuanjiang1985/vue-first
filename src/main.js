@@ -11,8 +11,9 @@ Vue.prototype.axios = axios;
 const store = new Vuex.Store({
   state: {
   	host: 'http://localhost:8081',
-  	key: '123hiuiewrwersddf',
+  	key: '123hiuie&%$rwersddf',
     token: null,
+    userName:"",
     count: 0
   },
   mutations: {
