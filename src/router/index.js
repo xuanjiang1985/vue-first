@@ -5,11 +5,12 @@ import Content from '@/components/Content'
 import Login from '@/components/Login'
 import Photo from '@/components/Photo'
 import Profile from '@/components/Profile'
+import Logout from '@/components/Logout'
 import NotFound from '@/components/NotFound'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -34,7 +35,13 @@ export default new Router({
 
     { path: '/profile',
       name: 'profile',
+      meta: { requireAuth: true },
       component: Profile
+
+    },
+    { path: '/logout',
+      name: 'logout',
+      component: Logout
     },
     {
         path: '*',
@@ -42,3 +49,5 @@ export default new Router({
     }
   ]
 })
+
+export default router

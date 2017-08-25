@@ -2,7 +2,7 @@
   <div class="container">
   <br>
   <br>
-    <div class="panel panel-default">
+    <div class="panel panel-default" v-if="login">
         <div class="panel-heading">
             <h3 class="panel-title">
                 登录
@@ -26,6 +26,7 @@
             <br><br>
         </div>
     </div>
+    <div class="alert alert-success" v-else>你已登录</div>
   </div>
 </template>
 
@@ -37,12 +38,12 @@ export default {
             phone: "",
             password:"",
             status:"",
+            login: true,
             active: false
         }
     },
     mounted() {
-        
-        
+        this.isLogin();
     },
     methods: {
         validLogin() {
@@ -85,10 +86,29 @@ export default {
                     if (response.data.code != 200) {
                     this.active = true;
                     this.status = response.data.msg;
+                    $("#isLogin").removeClass("fa fa-spin fa-spinner");
+                    } else {
+                        localStorage.setItem('token', response.data.token);
+                        localStorage.setItem('userName', response.data.userName);
+                        localStorage.setItem('userHeader', response.data.userHeader);
+                        localStorage.setItem('userId', response.data.userId);
+                        // this.$store.state.token = response.data.token;
+                        // this.$store.state.userName = response.data.userName;
+                        // this.$store.state.userId = response.data.userId;
+                        // this.$store.state.userHeader = response.data.userHeader;
+                        //console.log(response.data.token);
+                        location.href = "/";
                     }
                  }, response => {
                      console.log(response);
             })
+        },
+        isLogin() {
+            if (this.$store.state.token == null) {
+                this.login = true;
+            } else {
+                this.login = false;
+            }
         }
     }
 }
