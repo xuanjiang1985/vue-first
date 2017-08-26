@@ -4,7 +4,11 @@
     <transition name="fade" mode="out-in">
       <router-view></router-view>
     </transition>
-    <footer>My first vue app <a href="https://github.com/xuanjiang1985/vue-first" target="_blank">源码</a> &copy; 2017 </footer>
+    <footer>My first vue app 
+    <a href="https://github.com/xuanjiang1985/vue-first" target="_blank">前端源码</a>
+    <a href="https://github.com/xuanjiang1985/vue-first-backend">后端源码</a>
+     &copy; 2017 
+    </footer>
   </div>
 </template>
 

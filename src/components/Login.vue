@@ -23,7 +23,9 @@
                     <span class="btn btn-primary" v-on:click="validLogin">登录</span> <i id="isLogin"></i>
                 </div>
             </form>
-            <br><br>
+            <div class="clearfix"></div>
+            <div>测试账号：18922860697 密码：zhougang</div>
+            <br>
         </div>
     </div>
     <div class="alert alert-success" v-else>你已登录</div>

@@ -60,7 +60,7 @@ axios.interceptors.response.use(
 
 const store = new Vuex.Store({
   state: {
-  	host: 'http://localhost:8081',
+  	host: 'http://localhost:8082',
   	key: '123hiuie&%$rwersddf',
     token: localStorage.getItem('token'),
     userName: localStorage.getItem('userName'),
