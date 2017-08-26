@@ -30,7 +30,7 @@ export default {
 				if (response.data.code == 200) {
 					this.userName = response.data.userName;
 					this.userCreate = response.data.created_at;
-					this.userHeader = this.$store.state.host + response.data.userHeader;
+					this.userHeader = response.data.userHeader;
 				} else {
 					console.log("unkowon");
 				}

@@ -25,7 +25,7 @@ export default {
         return {
             login: true,
             userName: this.$store.state.userName,
-            userHeader: this.$store.state.host + this.$store.state.userHeader
+            userHeader: this.$store.state.userHeader
         }
     },
     mounted() {
