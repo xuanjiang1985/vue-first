@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h2>最新心情 (从后台拉取数据,无需授权)</h2>
     <div v-for="msg in msgs" class="well well-lg">
     	{{ msg.Content }} -- <i class="fa fa-sun-o"></i> {{ msg.Created_at }}
     </div>

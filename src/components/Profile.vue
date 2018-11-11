@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <h2>这是个人设置(授权拉取用户信息)</h2>
     <br><br>
     <h3><img v-bind:src="userHeader"></h3>
     <h3>用户名：{{ userName }}</h3>
